@@ -9,11 +9,18 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-        <h1>Welcome to My Page</h1>
-        {this.props.children}
-        <Link to="about"><button class="btn btn-success">about</button></Link>
-        <Link to="contact"><button class="btn btn-success">contact</button></Link>
-        <button onClick={this.navigate.bind(this)}>Featured</button>
+        <Nav location={location} />
+        <div class="container" style={containerStyle}>
+          <div class="row">
+            <div class="col-lg-12">
+              <h1>Welcome to My Page</h1>
+
+              {this.props.children}
+
+            </div>
+          </div>
+          <Footer/>
+        </div>
       </div>
     );
   }
