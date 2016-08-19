@@ -1,6 +1,8 @@
 import React from "react";
 
-export default class Projects extends React.Component {
+import Article from "../components/Article";
+
+export default class Archives extends React.Component {
   render() {
     const { query } = this.props.location;
     const { params } = this.props;
@@ -8,7 +10,7 @@ export default class Projects extends React.Component {
     const { date, filter} = query;
     return (
       <div>
-        <h1>Projects ({project})</h1>
+        <h1>Archives ({article})</h1>
         <h4>date: {date}, filter: {filter}</h4>
       </div>
     );
